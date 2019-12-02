@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="yereone" translate="label" sortOrder="10">
+            <label>Yereone</label>
+        </tab>
+        <section id="pwa" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Pwa</label>
+            <tab>yereone</tab>
+            <resource>Magento_Contact::contact</resource>
+            <group id="header" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Header Text</label>
+                <field id="headertext" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Text</label>
+                    <comment>Write Header Text</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,28 @@
+<div  id="customer-icon"  class="customer-icon"><a class="icon-user"></a>
+    <div id="popup-modal" style="display:none;">
+        <ul class="tab-ul">
+            <li class="tab-li active"><a href="login" ><?= $block->escapeHtmlAttr(__('Login')) ?></a></li>
+            <li class="tab-li"><a href="registration" ><?= $block->escapeHtmlAttr(__('Registration')) ?></a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="login">
+                <?= $block->getChildHtml('pwa_customer_form_login') ?>
+            </div>
+            <div class="tab-pane" id="registration">
+                <?= $block->getChildHtml('pwa_customer_form_register') ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/x-magento-init">
+        {
+            "*": {
+                "Yereone_Pwa/js/modal": {}
+            }
+        }
+ </script>

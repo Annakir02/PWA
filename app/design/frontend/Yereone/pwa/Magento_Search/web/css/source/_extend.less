@@ -1,0 +1,60 @@
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    #search {
+        width: 464px;
+        height: 47px;
+        border-radius: 31px;
+        border: 1px solid #DCDBDB;
+        box-sizing: border-box;
+        text: 16px;
+        color: #929292;
+        font-family: Roboto Condensed;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.06em;
+        padding-left: 25px;
+
+
+    }
+    .block-search .action.search {
+         margin-right: 6px
+    }
+
+    .block-search .action.search:before {
+        font-size: 37px!important;
+        line-height: 35px!important;
+    }
+    .block-search .action.search {
+        right: 35px;
+    }
+    .minicart-wrapper .action.showcart:before {
+        font-family: font-family-pwa;
+        content: '\61'!important;
+
+
+    }
+    .minicart-wrapper .action.showcart.active:before {
+        font-family: font-family-pwa;
+        content: '\61'!important;
+    }
+
+
+
+}
+
+
+
+//
+//  Mobile 768
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}

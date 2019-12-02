@@ -226,6 +226,8 @@ return [
         'MSP_TwoFactorAuth' => 1,
         'Temando_Shipping' => 1,
         'Vertex_Tax' => 1,
+        'Yereone_Megamenu' => 1,
+        'Yereone_Pwa' => 1,
         'Yotpo_Yotpo' => 1
     ]
 ];
