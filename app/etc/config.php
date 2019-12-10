@@ -228,6 +228,7 @@ return [
         'Vertex_Tax' => 1,
         'Yereone_Megamenu' => 1,
         'Yereone_Pwa' => 1,
+        'Yereone_Slider' => 1,
         'Yotpo_Yotpo' => 1
     ]
 ];

@@ -13,7 +13,7 @@ define(['jquery','mage/translate','Magento_Ui/js/modal/modal'], function($, $t, 
         };
 
         var popup = modal(options, $('#popup-modal'));
-        $("#customerIcon").on('click',function(){
+        $("#customer-icon").on('click',function(){
             $("#popup-modal").modal("openModal");
         });
 
