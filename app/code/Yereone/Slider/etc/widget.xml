@@ -1,0 +1,32 @@
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget class="Yereone\Slider\Block\Widget\Slider" id="slider_widget">
+        <label>Slider</label>
+        <description>Image Slider</description>
+        <parameters>
+            <parameter name="slider_id" xsi:type="select" visible="true" required="true" source_model="Yereone\Slider\Model\Slider\Source\Widget\Slider">
+                <label translate="true">Select Slider</label>
+            </parameter>
+            <parameter name="autoplay_time" xsi:type="select" visible="true" required="false" sort_order="20">
+                <label translate="true">Autoplay Time (seconds)</label>
+                <options>
+                    <option name="select" value="">
+                        <label>None</label>
+                    </option>
+                    <option name="one_second" value="1000">
+                        <label>1</label>
+                    </option>
+                    <option name="two_second" value="2000">
+                        <label>2</label>
+                    </option>
+                    <option name="three_second" value="3000">
+                        <label>3</label>
+                    </option>
+                    <option name="fife_second" value="5000">
+                        <label>5</label>
+                    </option>
+                </options>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

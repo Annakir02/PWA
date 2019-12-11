@@ -13,6 +13,11 @@
                 loop: true,
                 margin: 10,
                 nav: true,
+                <?php if ($block->getAutoplayTime()) : ?>
+                autoplay: true,
+                autoplayTimeout: <?= $block->getAutoplayTime() ?>,
+                autoplayHoverPause: true,
+                <?php endif; ?>
                 responsive: {
                     0: {
                         items: 1
