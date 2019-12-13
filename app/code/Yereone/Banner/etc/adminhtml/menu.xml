@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Yereone_Banner::banner" title="Banner" translate="title" module="Yereone_Banner" sortOrder="30"  parent="Yereone_Slider::yereone"  resource="Yereone_Banner::banner" />
+        <add id="Yereone_Banner::banners" title="Banners" translate="title" module="Yereone_Banner" sortOrder="30"  parent="Yereone_Banner::banner" action="banner/banner"  resource="Yereone_Banner::banner" />
+        <add id="Yereone_Banner::new_banner" title="Add New Banner" translate="title" module="Yereone_Banner" sortOrder="30"  parent="Yereone_Banner::banner" action="banner/banner/new"  resource="Yereone_Banner::banner" />
+
+    </menu>
+</config>

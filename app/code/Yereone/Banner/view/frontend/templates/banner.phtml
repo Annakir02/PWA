@@ -1,0 +1,7 @@
+<?php
+$banner = $this->getBanner();
+?>
+<div class="banner <?= $banner->getPosition() ?> " >
+    <img src="<?= $banner->getImage(); ?>">
+    <div class="banner-text"><?= $banner->getText(); ?></div>
+</div>

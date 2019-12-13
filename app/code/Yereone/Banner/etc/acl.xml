@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Yereone_Slider::yereone" title="Yereone">
+                    <resource id="Yereone_Banner::banner" title="Banner">
+                        <resource id="Yereone_Banner::banners" title="Banners" translate="title" sortOrder="20" >
+                            <resource id="Yereone_Banner::delete" title="Delete" translate="title" sortOrder="10" />
+                            <resource id="Yereone_Banner::save" title="Save" translate="title" sortOrder="30" />
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

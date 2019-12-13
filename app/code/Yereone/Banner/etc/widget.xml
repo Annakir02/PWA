@@ -1,0 +1,12 @@
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget class="Yereone\Banner\Block\Widget\Banner" id="banner_widget">
+        <label>Banner</label>
+        <description>Banner</description>
+        <parameters>
+            <parameter name="banner_id" xsi:type="select" visible="true" required="true" source_model="Yereone\Banner\Model\Banner\Source\Widget\Banner">
+                <label translate="true">Select Banner</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
