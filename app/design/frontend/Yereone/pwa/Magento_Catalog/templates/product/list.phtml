@@ -59,6 +59,12 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
                            class="product photo product-item-photo"
                            tabindex="-1">
                             <?= $productImage->toHtml() ?>
+                            <?php $helper = $this->helper('Yereone\Pwa\Helper\Data'); ?>
+                            <?php if ($helper->getProductLabel($_product) == 'sale') :?>
+                            <span class="product-label sale"><?= $block->escapeHtml(__('SALE')) ?></span>
+                            <?php elseif ($helper->getProductLabel($_product) == 'new') :?>
+                            <span class="product-label new"><?= $block->escapeHtml(__('NEW')) ?></span>
+                            <?php endif; ?>
                         </a>
                         <div class="product details product-item-details">
                             <?php
