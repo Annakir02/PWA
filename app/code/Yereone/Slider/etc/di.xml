@@ -13,4 +13,17 @@
             </argument>
         </arguments>
     </type>
+    <virtualType name="Yereone\Slider\Model\ResourceModel\Slide\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">slide</argument>
+            <argument name="resourceModel" xsi:type="string">Yereone\Slider\Model\ResourceModel\Slide</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="slider_slide_listing_data_source" xsi:type="string">Yereone\Slider\Model\ResourceModel\Slide\Collection</item>
+            </argument>
+        </arguments>
+    </type>
 </config>

@@ -81,6 +81,18 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
                     255,
                     ['nullable => false'],
                     'path'
+                )->addColumn(
+                    'text',
+                    \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+                    1000,
+                    ['nullable => false'],
+                    'text'
+                )->addColumn(
+                        'position',
+                        \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+                        1000,
+                        ['nullable => false'],
+                        'position'
                 )
                 ->addColumn(
                     'created_at',

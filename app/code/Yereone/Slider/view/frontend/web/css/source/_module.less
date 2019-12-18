@@ -1,0 +1,45 @@
+
+//
+//  Common
+//  _____________________________________________
+
+
+& when (@media-common = true) {
+
+	 .item {
+		display: flex;
+		&.s_top_center {
+			justify-content: center;
+		}
+		&.s_top_right {
+			justify-content: flex-end;
+		}
+		&.s_middle_left {
+			align-items: center;
+		}
+		&.s_middle_center {
+			justify-content: center;
+			align-items: center;
+		}
+		&.s_middle_right {
+			justify-content: flex-end;
+			align-items: center;
+		}
+		&.s_bottom_left {
+			align-items: flex-end;
+		}
+		&.s_bottom_center {
+			justify-content: center;
+			align-items: flex-end;
+		}
+		&.s_bottom_right {
+			justify-content: flex-end;
+			align-items: flex-end;
+		}
+	}
+
+	.slider-text {
+		position: absolute;
+	}
+
+}

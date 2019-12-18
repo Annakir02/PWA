@@ -63,9 +63,28 @@
                     <rule name="required-entry" xsi:type="boolean">true</rule>
                 </validation>
                 <dataType>text</dataType>
-                <label translate="true">Slider Title</label>
+                <label translate="true">Title</label>
                 <dataScope>name</dataScope>
             </settings>
         </field>
     </fieldset>
+    <insertListing name="testInsertListing">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="dataLinks" xsi:type="array">
+                    <item name="imports" xsi:type="boolean">false</item>
+                    <item name="exports" xsi:type="boolean">true</item>
+                </item>
+                <item name="autoRender" xsi:type="boolean">true</item>
+                <item name="ns" xsi:type="string">slider_slide_listing</item>
+                <item name="render_url" xsi:type="url" path="mui/index/render"/>
+                <item name="filter_url_params" xsi:type="array">
+                    <item name="id" xsi:type="string">*</item>
+                </item>
+                <item name="storageConfig" xsi:type="array">
+                    <item name="indexField" xsi:type="string">id</item>
+                </item>
+            </item>
+        </argument>
+    </insertListing>
 </form>

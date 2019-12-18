@@ -1,6 +1,6 @@
 <div class="slider owl-carousel">
     <?php foreach ($block->getSlides() as $slide): ?>
-        <div class="item"> <img src='<?= $slide->getPath(); ?>'></div>
+        <div class="item <?= $slide->getPosition() ?>"> <img src='<?= $slide->getPath(); ?>'> <div class="slider-text"><?= $slide->getText(); ?></div></div>
     <?php endforeach; ?>
 </div>
 

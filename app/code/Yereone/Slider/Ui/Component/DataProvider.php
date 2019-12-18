@@ -94,7 +94,7 @@ class DataProvider extends \Magento\Framework\View\Element\UiComponent\DataProvi
 
         if (!$this->getAuthorizationInstance()->isAllowed('Yereone_Slider::save')) {
             $metadata = [
-            'slider_slioder_columns' => [
+            'slider_slider_columns' => [
                 'arguments' => [
                     'data' => [
                         'config' => [
