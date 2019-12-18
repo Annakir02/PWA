@@ -1,0 +1,86 @@
+
+//
+//  Common
+//  _____________________________________________
+
+
+
+
+
+& when (@media-common = true) {
+	.home-page-top {
+		.slider .owl-item {
+			width: 609px;
+			height: 778px;
+		}
+		.slider {
+			overflow: hidden;
+			width: 609px;
+			height: 778px;
+			position: relative;
+			.owl-prev {
+				position: absolute;
+				height: 79px;
+				width: 79px;
+				left: 12px;
+				top: 350px;
+				background-color: rgba(255, 255, 255, 0.5) !important;
+				border-radius: 0px;
+				span {
+					font-size: 30px;
+					color: black;
+				}
+			}
+			.owl-next {
+				position: absolute;
+				height: 79px;
+				width: 79px;
+				right: 12px;
+				top: 350px;
+				background-color: rgba(255, 255, 255, 0.5) !important;
+				border-radius: 0px;
+				span {
+					font-size: 30px;
+					color: black;
+				}
+			}
+		}
+
+	}
+
+	.slider { grid-area: slider; }
+	.banner-top {
+		grid-area: bannerone;
+		img{
+			width: 610px;
+			height: 461px;
+		}
+	}
+	.banner-bottom-left {
+		grid-area: bannertwo;
+		img{
+			width: 295px;
+			height: 100%;
+		}
+
+	}
+	.banner-bottom-right {
+		grid-area: bannerthree;
+		img {
+			width: 295px;
+			height: 100%;
+		}
+	}
+	.home-page-top {
+		display: grid;
+		grid-template-areas:
+				'slider slider bannerone bannerone'
+				'slider slider bannerone bannerone'
+				'slider slider bannerone bannerone'
+				'slider slider bannertwo bannerthree'
+				'slider slider bannertwo bannerthree';
+		grid-gap: 10px;
+		padding: 10px;
+	}
+
+}
