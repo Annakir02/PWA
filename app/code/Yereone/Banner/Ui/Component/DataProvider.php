@@ -92,7 +92,7 @@ class DataProvider extends \Magento\Framework\View\Element\UiComponent\DataProvi
     {
         $metadata = [];
 
-        if (!$this->getAuthorizationInstance()->isAllowed('Yereone_Slider::save')) {
+        if (!$this->getAuthorizationInstance()->isAllowed('Yereone_Banner::save')) {
             $metadata = [
             'banner_banner_columns' => [
                 'arguments' => [

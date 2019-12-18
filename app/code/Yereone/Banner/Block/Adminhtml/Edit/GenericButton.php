@@ -17,10 +17,10 @@ class GenericButton
 
     }
 
-    public function getSliderId()
+    public function getBannerId()
     {
-        $sliderId = $this->request->getParam('banner_id');
-        return $sliderId;
+        $bannerId = $this->request->getParam('banner_id');
+        return $bannerId;
     }
 
     public function getUrl($route = '', $params = [])

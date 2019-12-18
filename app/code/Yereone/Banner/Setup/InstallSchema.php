@@ -63,7 +63,7 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
                     null,
                     ['nullable' => false, 'default' => \Magento\Framework\DB\Ddl\Table::TIMESTAMP_INIT_UPDATE],
                     'Updated At')
-                ->setComment('Slider Table');
+                ->setComment('Table');
             $installer->getConnection()->createTable($table);
         }
 

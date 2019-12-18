@@ -44,6 +44,6 @@ class Save extends \Magento\Backend\App\AbstractAction
             $this->messageManager->addExceptionMessage($e, __('Something went wrong while saving the banner.'));
         }
 
-        return $resultRedirect->setPath('*/*/edit', ['slider_id' => $id]);
+        return $resultRedirect->setPath('*/*/edit', ['banner_id' => $id]);
     }
 }

@@ -63,7 +63,7 @@
                     <rule name="required-entry" xsi:type="boolean">true</rule>
                 </validation>
                 <dataType>text</dataType>
-                <label translate="true">Banner Title</label>
+                <label translate="true">Title</label>
                 <dataScope>title</dataScope>
             </settings>
         </field>
@@ -78,11 +78,11 @@
                     <rule name="required-entry" xsi:type="boolean">true</rule>
                 </validation>
                 <dataType>text</dataType>
-                <label translate="true">Banner Image</label>
+                <label translate="true">Image</label>
                 <dataScope>image</dataScope>
             </settings>
         </field>
-        <field name="text" sortOrder="40" formElement="input">
+        <field name="text" sortOrder="40" formElement="textarea">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="source" xsi:type="string">banner</item>
@@ -93,7 +93,7 @@
                     <rule name="required-entry" xsi:type="boolean">true</rule>
                 </validation>
                 <dataType>text</dataType>
-                <label translate="true">Banner Text</label>
+                <label translate="true">Text</label>
                 <dataScope>text</dataScope>
             </settings>
         </field>
