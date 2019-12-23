@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Yereone_Brand::brand" title="Brand" translate="title" module="Yereone_Brand" sortOrder="30"  parent="Yereone_Slider::yereone"  resource="Yereone_Brand::brand" />
+        <add id="Yereone_Brand::brands" title="Brands" translate="title" module="Yereone_Brand" sortOrder="30"  parent="Yereone_Brand::brand" action="brand/brand"  resource="Yereone_Brand::brand" />
+        <add id="Yereone_Brand::new_brand" title="Add New Brand" translate="title" module="Yereone_Brand" sortOrder="30"  parent="Yereone_Brand::brand" action="brand/brand/new"  resource="Yereone_Brand::brand" />
+    </menu>
+</config>

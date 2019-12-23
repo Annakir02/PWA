@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="yereone" translate="label" sortOrder="10">
+            <label>Yereone</label>
+        </tab>
+        <section id="brand" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Brand</label>
+            <tab>yereone</tab>
+            <resource>Magento_Contact::contact</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="attribute" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Attribute</label>
+                    <source_model>Yereone\Brand\Model\Config\Source\Attribute</source_model>
+                    <comment>Select the attribute,which will be considered as brand</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
