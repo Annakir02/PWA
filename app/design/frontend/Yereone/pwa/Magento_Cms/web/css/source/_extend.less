@@ -49,6 +49,9 @@
 	}
 
 	.slider { grid-area: slider; }
+	.banner-text {
+		margin-top: 18px;
+	}
 	.banner-top {
 		grid-area: bannerone;
 		img{
@@ -71,6 +74,9 @@
 			height: 100%;
 		}
 	}
+	.column.main {
+		margin-top: -19px;
+	}
 	.home-page-top {
 		display: grid;
 		grid-template-areas:
@@ -79,14 +85,13 @@
 				'slider slider bannerone bannerone'
 				'slider slider bannertwo bannerthree'
 				'slider slider bannertwo bannerthree';
-		grid-gap: 10px;
-		padding: 10px;
+		grid-gap: 19px;
 	}
 
 	.features {
 		display: flex;
 		justify-content: space-between;
-		margin-top: 60px;
+		margin-top: 82px;
 		border-bottom: 1px solid #DCDBDB;
 		border-top: 1px solid #DCDBDB;
 		&>div {
@@ -94,7 +99,7 @@
 			flex-basis: 414px;
 			align-items: center;
 			justify-content: center;
-			.features-info {
+			.feature-info {
 				padding: 10px;
 			}
 			.feature-title {
@@ -104,6 +109,7 @@
 				font-size: 16px;
 				line-height: 19px;
 				letter-spacing: 0.02em;
+				margin-left: 28px;
 			}
 			.feature-text {
 				font-family: roboto-condenced;
@@ -112,13 +118,165 @@
 				font-size: 16px;
 				line-height: 19px;
 				color: #929292;
+				margin-left: 28px;
 			}
 			.feature-icon {
-				font-size: 50px;
+				font-size: 55px;
+				margin-left: -60px;
+				margin-top: 5px;
+				padding-left: 22px;
 			}
 
 		}
 
 	}
+	.product-item .product-item-photo {
+		position: relative;
+		display: block;
+
+		.product-label {
+			position: absolute;
+			right: 1px;
+			z-index: 1;
+			width: 45px;
+			height: 18px;
+			font-family: roboto-condenced;
+			font-size: 12px;
+			color: white;
+			line-height: 14px;
+			letter-spacing: 0.02em;
+			padding: 2px 10px;
+			margin: 10px 10px;
+			margin-top: 14px;
+			box-sizing: border-box;
+			&.new {
+				background-color: @color-green;
+			}
+			&.sale {
+				background-color: @color-pink;
+			}
+		}
+	}
+	.block-products-carousel {
+		margin-top: 89px;
+		.block-title {
+			text-align: center;
+			strong {
+				font-family: roboto-condenced;
+				font-style: normal;
+				font-weight: bold;
+				font-size: 20px;
+				line-height: 23px;
+				letter-spacing: 0.08em;
+			}
+		}
+		.block-content {
+			margin-top: 65px;
+		}
+		.product-item-info {
+			width: 295px !important;
+			.product-image-wrapper {
+				width: 295px;
+				height: 70px;
+				.product-image-photo {
+					margin-left: 7px;
+
+				}
+			}
+			.product-item-details {
+				margin-left: 8px;
+				.price-box.price-final_price {
+					display: flex;
+					margin: -2px 0 0 0;
+					.price-label {
+						display: none;
+					}
+				}
+				.product-item-name {
+					font-family: roboto-condenced;
+					font-style: normal;
+					font-weight: normal;
+					font-size: 16px;
+					line-height: 19px;
+					letter-spacing: 0.02em;
+					margin-top: 47px;
+				}
+			}
+
+			.special-price .price {
+				position: absolute;
+				left: 82px;
+				color: @color-pink;
+			}
+			.old-price {
+				position: absolute;
+
+			}
+
+			.old-price .price-wrapper {
+				position: relative;
+				top: 15px;
+			}
+		}
+		.product_item_hover {
+			position: absolute;
+			width: 295px;
+			height: 371px;
+			top: 0px;
+			left: 0px;
+		}
+		.product-item.item:hover .product_item_hover {
+			z-index: 10;
+			background-color:rgba(0,0,0,0.3);
+		}
+		.action.tocart.primary {
+			display: none!important;
+		}
+		.action.tocart.primary {
+			border-radius: 31px;
+			width: 144px;
+			height: 38px;
+			background-color: white;
+			color: black;
+			font-family:roboto-condenced;
+			font-style: normal;
+			font-weight: 300;
+			font-size: 12px;
+			line-height: 14px;
+			letter-spacing: 0.04em;
+		}
+		.actions-secondary {
+			visibility: hidden;
+		}
+		.product-item.item:hover .action.tocart.primary {
+			display: block!important;
+			position: absolute;
+			top: 167px;
+			z-index: 15;
+			left: 75px;
+			border-radius: 31px;
+		}
+		.price-container.price-final_price {
+			margin-top: 10px;
+			color: @color-blue;
+		}
+		.product-carousel .owl-nav {
+			.owl-prev {
+				left: -35px;
+				position: absolute;
+				top: 160px;
+				font-size: 30px;
+			}
+			.owl-next {
+				right: -35px;
+				position: absolute;
+				top: 160px;
+				font-size: 30px;
+			}
+		}
+
+
+	}
+
 
 }
