@@ -1,0 +1,130 @@
+
+//
+//  Common
+//  _____________________________________________
+
+
+
+
+
+& when (@media-common = true) {
+	#maincontent {
+		.page-title-wrapper {
+			text-align: center;
+			.page-title {
+				margin-top: 60px;
+				font-family: roboto-condenced;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 36px;
+				line-height: 42px;
+				letter-spacing: 0.08em;
+			}
+		}
+	}
+	#shopping-cart-table {
+		margin-top: 27px;
+		thead {
+			background: #F4F4F4;
+			border: 1px solid #F5F5F5;
+			box-sizing: border-box;
+			height: 50px;
+
+			.col {
+				padding: 15px 42px 15px 42px;
+				font-family: roboto-condenced;
+				font-style: normal;
+				font-weight: bold;
+				font-size: 16px;
+				line-height: 19px;
+				letter-spacing: 0.06em;
+				&.item.product {
+					width: 365px;
+					display: flex;
+				}
+				&.delete {
+					padding-left: 4px;
+				}
+			}
+		}
+		.icon-delete {
+			font-size: 18px;
+			color: #929292;
+		}
+		.cart.item {
+			.product-item-name {
+				margin-top: 60px;
+				margin-left: 48px;
+				font-family: roboto-condenced;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 18px;
+				line-height: 21px;
+				letter-spacing: 0.06em;
+			}
+			.action.action-edit {
+				display: none;
+
+			}
+			.action.action-delete {
+				background-color: rgba(255,255,255,0);
+				border: none;
+				span {
+					font-size: 0px;
+					&:before {
+						font-family: font-family-pwa;
+						content: '\68'!important;
+						font-size: 15px;
+						position: relative;
+						top: -5px;
+						left: -30px;
+					}
+				}
+			}
+		}
+		td:not(:first-child) {
+			padding-top: 80px;
+		}
+		.item {
+			display: contents;
+		}
+		.control.qty {
+			border: 1px solid #000000;
+			box-sizing: border-box;
+			border-radius: 29px;
+			width: 133px;
+			height: 38px;
+			text-align: center;
+			position: relative;
+			top: -10px;
+		}
+		.col span {
+			text-align: center;
+		}
+	}
+	.cart.table-wrapper .col.price {
+		text-align: center;
+	}
+	.input-text.qty {
+		border: 0px;
+		background: rgba(0,0,0,0);
+	}
+	.control.qty label {
+		position: relative;
+		top: 6px;
+	}
+	.minus, .plus {
+		cursor: pointer;
+	}
+	.block-shipping {
+		display: none;
+	}
+	.cart-summary {
+		.summory.title {
+			display: none;
+		}
+	}
+
+
+
+}
