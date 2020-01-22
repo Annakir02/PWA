@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Yereone\Brand\Api\BrandRepositoryInterface" type="Yereone\Brand\Model\BrandRepository"/>
     <virtualType name="Yereone\Brand\Model\ResourceModel\Brand\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
         <arguments>
             <argument name="mainTable" xsi:type="string">brand</argument>
@@ -11,6 +12,34 @@
             <argument name="collections" xsi:type="array">
                 <item name="brand_brand_listing_data_source" xsi:type="string">Yereone\Brand\Model\ResourceModel\Brand\Collection</item>
             </argument>
+        </arguments>
+    </type>
+    <virtualType name="Yereone\Brand\ImageUploader" type="Yereone\Brand\Model\ImageUploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="string">yereone/tmp/image</argument>
+            <argument name="basePath" xsi:type="string">yereone/image</argument>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="jpg" xsi:type="string">jpg</item>
+                <item name="jpeg" xsi:type="string">jpeg</item>
+                <item name="gif" xsi:type="string">gif</item>
+                <item name="png" xsi:type="string">png</item>
+            </argument>
+            <argument name="allowedMimeTypes" xsi:type="array">
+                <item name="jpg" xsi:type="string">image/jpg</item>
+                <item name="jpeg" xsi:type="string">image/jpeg</item>
+                <item name="gif" xsi:type="string">image/gif</item>
+                <item name="png" xsi:type="string">image/png</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Yereone\Brand\Controller\Adminhtml\Brand\Upload">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">Yereone\Brand\ImageUploader</argument>
+        </arguments>
+    </type>
+    <type name="Yereone\Brand\Controller\Adminhtml\Brand\Save">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">Yereone\Brand\ImageUploader</argument>
         </arguments>
     </type>
 </config>

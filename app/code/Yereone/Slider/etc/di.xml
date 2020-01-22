@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Yereone\Slider\Api\SlideRepositoryInterface" type="Yereone\Slider\Model\Slide\SlideRepository"/>
     <virtualType name="Yereone\Slider\Model\ResourceModel\Slider\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
         <arguments>
             <argument name="mainTable" xsi:type="string">slider</argument>
@@ -24,6 +25,34 @@
             <argument name="collections" xsi:type="array">
                 <item name="slider_slide_listing_data_source" xsi:type="string">Yereone\Slider\Model\ResourceModel\Slide\Collection</item>
             </argument>
+        </arguments>
+    </type>
+    <virtualType name="Yereone\Slider\ImageUploader" type="Yereone\Slider\Model\ImageUploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="string">yereone/tmp/image</argument>
+            <argument name="basePath" xsi:type="string">yereone/image</argument>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="jpg" xsi:type="string">jpg</item>
+                <item name="jpeg" xsi:type="string">jpeg</item>
+                <item name="gif" xsi:type="string">gif</item>
+                <item name="png" xsi:type="string">png</item>
+            </argument>
+            <argument name="allowedMimeTypes" xsi:type="array">
+                <item name="jpg" xsi:type="string">image/jpg</item>
+                <item name="jpeg" xsi:type="string">image/jpeg</item>
+                <item name="gif" xsi:type="string">image/gif</item>
+                <item name="png" xsi:type="string">image/png</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Yereone\Slider\Controller\Adminhtml\Slide\Upload">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">Yereone\Slider\ImageUploader</argument>
+        </arguments>
+    </type>
+    <type name="Yereone\Slider\Controller\Adminhtml\Slide\Save">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">Yereone\Slider\ImageUploader</argument>
         </arguments>
     </type>
 </config>

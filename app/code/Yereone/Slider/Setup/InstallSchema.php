@@ -76,11 +76,11 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
                     ['nullable => false'],
                     'name'
                 )->addColumn(
-                    'path',
+                    'image',
                     \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
                     255,
                     ['nullable => false'],
-                    'path'
+                    'image'
                 )->addColumn(
                     'text',
                     \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,

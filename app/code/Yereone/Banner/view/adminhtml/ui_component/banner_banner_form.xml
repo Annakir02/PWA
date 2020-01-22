@@ -67,20 +67,33 @@
                 <dataScope>title</dataScope>
             </settings>
         </field>
-        <field name="image" sortOrder="30" formElement="input">
+        <field name="image" sortOrder="30" formElement="imageUploader">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="source" xsi:type="string">banner</item>
+                    <item name="source" xsi:type="string">banners</item>
                 </item>
             </argument>
             <settings>
-                <validation>
-                    <rule name="required-entry" xsi:type="boolean">true</rule>
-                </validation>
-                <dataType>text</dataType>
+                <elementTmpl>ui/form/element/uploader/image</elementTmpl>
+                <dataType>string</dataType>
                 <label translate="true">Image</label>
-                <dataScope>image</dataScope>
+                <visible>true</visible>
+                <required>false</required>
             </settings>
+            <formElements>
+                <imageUploader>
+                    <settings>
+                        <required>false</required>
+                        <uploaderConfig>
+                            <param xsi:type="url" name="url" path="banner/banner/upload"/>
+                        </uploaderConfig>
+                        <openDialogTitle>Media Gallery</openDialogTitle>
+                        <initialMediaGalleryOpenSubpath>yereone/image</initialMediaGalleryOpenSubpath>
+                        <allowedExtensions>jpg jpeg gif png</allowedExtensions>
+                        <maxFileSize>4194304</maxFileSize>
+                    </settings>
+                </imageUploader>
+            </formElements>
         </field>
         <field name="text" sortOrder="40" formElement="textarea">
             <argument name="data" xsi:type="array">

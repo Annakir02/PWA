@@ -2,6 +2,6 @@
 $banner = $this->getBanner();
 ?>
 <div class="banner <?= $banner->getPosition() ?> " >
-    <img src="<?= $banner->getImage(); ?>">
+    <img src=" <?php echo $block->getBaseMediaUrl(). 'yereone/image/banner' . $banner->getImage(); ?>">
     <div class="banner-text"><?= $banner->getText(); ?></div>
 </div>
