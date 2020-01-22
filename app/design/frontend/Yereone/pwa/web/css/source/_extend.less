@@ -1,4 +1,49 @@
 //
+//  Color
+//  _____________________________________________
+
+@color-icon-grey: #8f8f8f;
+@color-icon-hover-grey: #333333;
+@color-blue: #0177DB;
+@color-pink: #FF173E;
+@color-green: #20b619;
+@color-grey: #5C5C5C;
+@color-light-grey: #DCDBDB;
+
+
+//
+//  Mixins
+//  _____________________________________________
+
+.font-style (@font-family, @font-weight, @font-size, @line-height, @letter-spacing) {
+    font-family: @font-family;
+    font-weight: @font-weight;
+    font-size:  @font-size;
+    line-height: @line-height;
+    letter-spacing: @letter-spacing;
+}
+
+.displaFlex() {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.justify-content(@justify: flex-start) {
+    -webkit-justify-content: @justify;
+    -ms-justify-content: @justify;
+    justify-content: @justify;
+}
+
+.align-items(@align: stretch) {
+    -webkit-align-items: @align;
+    -ms-align-items: @align;
+    align-items: @align;
+}
+
+//
 //  Fonts
 //  _____________________________________________
 
@@ -78,6 +123,34 @@
 .icon-remove:before {
     content: "\68";
 }
+.icon-lock:before {
+    content: "\69";
+}
+.icon-search:before {
+    content: "\6a";
+}
+.icon-search:before {
+    content: "\6a";
+}
+.icon-mail:before {
+    content: "\6b";
+}
+.icon-home:before {
+    content: "\6c";
+}
+.icon-tel:before {
+    content: "\6d";
+}
+.icon-instagram:before {
+    content: "\6e";
+}
+.icon-facebook:before {
+    content: "\6f";
+}
+.icon-twitter:before {
+    content: "\70";
+}
+
 
 
 //

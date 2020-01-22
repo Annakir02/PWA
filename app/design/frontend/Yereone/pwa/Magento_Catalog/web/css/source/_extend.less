@@ -8,17 +8,14 @@
 		position: relative;
 		display: block;
 		.product-label {
+			.font-style (roboto-condenced, normal, 12px, 14px, 0.02em);
 			position: absolute;
 			right: 0;
 			top: 0;
 			z-index: 1;
 			width: 45px;
 			height: 18px;
-			font-family: roboto-condenced;
-			font-size: 12px;
 			color: white;
-			line-height: 14px;
-			letter-spacing: 0.02em;
 			padding: 2px 10px;
 			margin: 10px 10px;
 			box-sizing: border-box;
@@ -28,6 +25,14 @@
 			&.sale {
 				background-color: @color-pink;
 			}
+		}
+	}
+
+	.category-view {
+		.displaFlex();
+		margin-top: 20px;
+		.block.filter {
+			width: 318px;
 		}
 	}
 }

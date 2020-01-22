@@ -1,0 +1,157 @@
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+.footer.content {
+	.displaFlex();
+	background: black;
+	position: relative;
+	color: white;
+	padding-top: 70px;
+	max-width: 1500px !important;
+	padding-left: 130px !important;
+	padding-right: 130px !important;
+	height: 444px;
+	margin-top: 20px !important;
+	.logo {
+		margin: 0;
+	}
+	.pwa {
+		width: 362px;
+		.social {
+			margin-top: 32px;
+			.icon-instagram {
+				background-color: @color-blue;
+				border: 1px solid  @color-blue;
+				box-sizing: border-box;
+				border-radius: 100px;
+				width: 40px;
+				height: 40px;
+				&::before {
+					color: white;
+					margin-left: -4px;
+					font-size: 16px;
+				}
+			}
+			button div {
+				display: none;
+			}
+			.icon-facebook, .icon-twitter {
+				border: 1px solid  @color-blue;
+				box-sizing: border-box;
+				border-radius: 100px;
+				width: 40px;
+				height: 40px;
+				background-color: black;
+				&::before {
+					color: @color-blue;
+					margin-left: -4px;
+					font-size: 16px;
+				}
+			}
+
+		}
+		.pwa-text {
+			margin-top: 88px;
+			width: 235px;
+			line-height: 24px;
+		}
+
+	}
+	.block.newsletter {
+		position: absolute;
+		right: 0px;
+		bottom:0px;
+	}
+	.shop {
+		width: 310px;
+	}
+	.about-us {
+		width: 260px;
+	}
+	.shop ul li, .about-us ul li  {
+		.displaFlex();
+		.align-items(center);
+	}
+	.shop ul li::before, .about-us ul li::before{
+		content: "\2022";
+		color: @color-blue;
+		font-weight: bold;
+		display: inline-block;
+		width: 1em;
+		font-size: 30px;
+	}
+
+	.shop ul, .about-us ul {
+		margin-top: 39px;
+
+	}
+	.contact-us ul {
+		margin-top: 43px;
+	}
+	.shop ul li, .about-us ul li, .contact-us ul li {
+		a {
+			text-decoration-line: none;
+			color: white;
+		}
+		height: 29px;
+		&::before {
+			color: @color-blue;
+			margin-right: -7px;
+		}
+
+	}
+	.contact-us ul li::before {
+		margin-right: 13px;
+	}
+	.pwa .logo img {
+		width: 95px !important;
+		height: 36px !important;
+		margin-top: 3px;
+	}
+
+
+	.newsletter {
+		&.block {
+			bottom: 24px;
+			right: 40px;
+		}
+		&.text {
+			margin-top: 47px;
+		}
+		&.field {
+			margin-left: 80px;
+
+		}
+		#newsletter{
+			position: relative;
+			width: 250px;
+			height: 40px;
+			border: 1px solid @color-blue;
+			box-sizing: border-box;
+			border-radius: 49px;
+		}
+	}
+	.action.subscribe.primary.sr-only {
+		background-color: @color-blue;
+		border-radius: 52px;
+		width: 103px;
+		height: 40px;
+		z-index: 2;
+		position: relative;
+		left: -85px;
+		span {
+			font-size: 0px;
+			&::before {
+				content: 'JOIN';
+				.font-style (roboto-condenced, normal, 14px, 16px, 0.08em);
+				font-style: normal;
+				color: white;
+			}
+		}
+	}
+
+ }
+}

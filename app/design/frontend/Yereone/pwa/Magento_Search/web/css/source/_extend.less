@@ -6,43 +6,52 @@
 & when (@media-common = true) {
 
     #search {
+        .font-style (roboto-condenced, 300, 14px, 16px, 0.06em);
+
         width: 464px;
         height: 47px;
         border-radius: 31px;
-        border: 1px solid #DCDBDB;
+        border: 1px solid @color-light-grey;
         box-sizing: border-box;
         text: 16px;
         color: #929292;
-        font-family: Roboto Condensed;
         font-style: normal;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 16px;
-        letter-spacing: 0.06em;
         padding-left: 25px;
+        &::placeholder {
+            .font-style (roboto-condenced, 300, 14px, 16px, 0.06em);
+            font-style: normal;
+            color: #929292;
+
+        }
 
 
     }
     .block-search .action.search {
-         margin-right: 6px
+         margin-right: 6px;
     }
 
     .block-search .action.search:before {
-        font-size: 37px!important;
-        line-height: 35px!important;
+        font-family: font-family-pwa !important;
+        content: '\6a' !important;
+        font-size: 25px !important;
+        line-height: 35px !important;
     }
     .block-search .action.search {
         right: 35px;
     }
+    .action.search {
+        margin-right: 12px !important;
+    }
+
     .minicart-wrapper .action.showcart:before {
         font-family: font-family-pwa;
-        content: '\61'!important;
+        content: '\61' !important;
 
 
     }
     .minicart-wrapper .action.showcart.active:before {
         font-family: font-family-pwa;
-        content: '\61'!important;
+        content: '\61' !important;
     }
 
 

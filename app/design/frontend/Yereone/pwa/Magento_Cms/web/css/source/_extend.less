@@ -8,46 +8,6 @@
 
 
 & when (@media-common = true) {
-	.home-page-top {
-		.slider .owl-item {
-			max-width: 609px;
-			height: 778px;
-		}
-		.slider {
-			overflow: hidden;
-			max-width: 609px;
-			height: 778px;
-			position: relative;
-			.owl-prev {
-				position: absolute;
-				height: 79px;
-				width: 79px;
-				left: 12px;
-				top: 350px;
-				background-color: rgba(255, 255, 255, 0.5) !important;
-				border-radius: 0px;
-				span {
-					font-size: 30px;
-					color: black;
-				}
-			}
-			.owl-next {
-				position: absolute;
-				height: 79px;
-				width: 79px;
-				right: 12px;
-				top: 350px;
-				background-color: rgba(255, 255, 255, 0.5) !important;
-				border-radius: 0px;
-				span {
-					font-size: 30px;
-					color: black;
-				}
-			}
-		}
-
-	}
-
 	.slider { grid-area: slider; }
 	.banner-text {
 		margin-top: 18px;
@@ -89,34 +49,27 @@
 	}
 
 	.features {
-		display: flex;
-		justify-content: space-between;
+		.displaFlex();
+		.justify-content(space-between);
 		margin-top: 82px;
-		border-bottom: 1px solid #DCDBDB;
-		border-top: 1px solid #DCDBDB;
-		&>div {
-			display: flex;
+		border-bottom: 1px solid @color-light-grey;
+		border-top: 1px solid @color-light-grey;
+		> div {
+			.displaFlex();
 			flex-basis: 414px;
-			align-items: center;
-			justify-content: center;
+			.align-items(center);
+			.justify-content(center);
 			.feature-info {
 				padding: 10px;
 			}
 			.feature-title {
-				font-family: roboto-condenced;
+				.font-style (roboto-condenced, normal, 16px, 19px, 0.02em);
 				font-style: normal;
-				font-weight: normal;
-				font-size: 16px;
-				line-height: 19px;
-				letter-spacing: 0.02em;
 				margin-left: 28px;
 			}
 			.feature-text {
-				font-family: roboto-condenced;
+				.font-style (roboto-condenced, normal, 16px, 19px, 0.06em);
 				font-style: normal;
-				font-weight: normal;
-				font-size: 16px;
-				line-height: 19px;
 				color: #929292;
 				margin-left: 28px;
 			}
@@ -157,17 +110,13 @@
 			}
 		}
 	}
-	.block-products-carousel {
+	.block-products-carousel, .products-grid {
 		margin-top: 89px;
 		.block-title {
 			text-align: center;
 			strong {
-				font-family: roboto-condenced;
+				.font-style (roboto-condenced, bold, 20px, 23px, 0.08em);
 				font-style: normal;
-				font-weight: bold;
-				font-size: 20px;
-				line-height: 23px;
-				letter-spacing: 0.08em;
 			}
 		}
 		.block-content {
@@ -186,19 +135,16 @@
 			.product-item-details {
 				margin-left: 8px;
 				.price-box.price-final_price {
-					display: flex;
+					.displaFlex();
 					margin: -2px 0 0 0;
 					.price-label {
 						display: none;
 					}
 				}
 				.product-item-name {
+					.font-style (roboto-condenced, normal, 16px, 19px, 0.02em);
 					font-family: roboto-condenced;
 					font-style: normal;
-					font-weight: normal;
-					font-size: 16px;
-					line-height: 19px;
-					letter-spacing: 0.02em;
 					margin-top: 47px;
 				}
 			}
@@ -222,15 +168,15 @@
 			position: absolute;
 			width: 295px;
 			height: 371px;
-			top: 0px;
-			left: 0px;
+			top: 0;
+			left: 0;
 		}
 		.product-item.item:hover .product_item_hover {
 			z-index: 10;
 			background-color:rgba(0,0,0,0.3);
 		}
 		.action.tocart.primary {
-			display: none!important;
+			display: none !important;
 		}
 		.action.tocart.primary {
 			border-radius: 31px;
@@ -238,18 +184,14 @@
 			height: 38px;
 			background-color: white;
 			color: black;
-			font-family:roboto-condenced;
+			.font-style (roboto-condenced, 300, 12px, 14px, 0.04em);
 			font-style: normal;
-			font-weight: 300;
-			font-size: 12px;
-			line-height: 14px;
-			letter-spacing: 0.04em;
 		}
 		.actions-secondary {
 			visibility: hidden;
 		}
 		.product-item.item:hover .action.tocart.primary {
-			display: block!important;
+			display: block !important;
 			position: absolute;
 			top: 167px;
 			z-index: 15;
@@ -274,22 +216,11 @@
 				font-size: 30px;
 			}
 		}
-
-
 	}
 
-	.brands {
-		.product-brands {
-			text-align: center;
-			font-family: roboto-condenced;
-			font-style: normal;
-			font-weight: bold;
-			font-size: 20px;
-			line-height: 23px;
-			letter-spacing: 0.08em;
-			margin-top: 148px;
-			margin-bottom: 66px;
-		}
+	.item.product.product-item {
+		position: relative;
 	}
+
 
 }
