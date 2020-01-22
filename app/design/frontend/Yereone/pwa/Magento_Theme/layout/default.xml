@@ -12,5 +12,32 @@
             </block>
         </referenceContainer>
        <referenceBlock  name="top.links" remove="true" />
+        <move element="checkout.cart.coupon" destination="cart.summary"  after="checkout.cart.shipping"/>
+        <move element="catalog.leftnav" destination="category.view.container" before="-"/>
+        <referenceContainer name="footer">
+            <referenceBlock name="footer_links" remove="true" />
+            <referenceBlock name="copyright" remove="true" />
+            <referenceBlock name="report.bugs" remove="true" />
+            <block class="Magento\Cms\Block\Block" name="pwa_text">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">pwa_text</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="shop">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">shop</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="about_us">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">about_us</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="contact_us">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">contact_us</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
     </body>
 </page>
