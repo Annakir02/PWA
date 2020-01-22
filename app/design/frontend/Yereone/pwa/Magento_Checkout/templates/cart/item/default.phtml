@@ -18,7 +18,7 @@ $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinima
 ?>
 <tbody class="cart item">
     <tr class="item-info">
-        <td data-th="<?= $block->escapeHtml(__('Item')) ?>" class="col item">
+        <td data-th="<?= $block->escapeHtml(__('Item')) ?>">
             <?php if ($block->hasProductUrl()) :?>
                 <a href="<?= $block->escapeUrl($block->getProductUrl()) ?>"
                    title="<?= $block->escapeHtml($block->getProductName()) ?>"
@@ -98,16 +98,20 @@ $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinima
                 <div class="control qty">
                     <label for="cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty">
                         <span class="label"><?= $block->escapeHtml(__('Qty')) ?></span>
-                        <input id="cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty"
-                               name="cart[<?= $block->escapeHtmlAttr($_item->getId()) ?>][qty]"
-                               data-cart-item-id="<?= $block->escapeHtmlAttr($_item->getSku()) ?>"
-                               value="<?= $block->escapeHtmlAttr($block->getQty()) ?>"
-                               type="number"
-                               size="4"
-                               title="<?= $block->escapeHtmlAttr(__('Qty')) ?>"
-                               class="input-text qty"
-                               data-validate="{required:true,'validate-greater-than-zero':true}"
-                               data-role="cart-item-qty"/>
+                            <span>
+                                <span class="minus">-</span>
+                                    <input id="cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty"
+                                           name="cart[<?= $block->escapeHtmlAttr($_item->getId()) ?>][qty]"
+                                           data-cart-item-id="<?= $block->escapeHtmlAttr($_item->getSku()) ?>"
+                                           value="<?= $block->escapeHtmlAttr($block->getQty()) ?>"
+                                           type="number"
+                                           size="4"
+                                           title="<?= $block->escapeHtmlAttr(__('Qty')) ?>"
+                                           class="input-text qty"
+                                           data-validate="{required:true,'validate-greater-than-zero':true}"
+                                           data-role="cart-item-qty"/>
+                                <span class="plus">+</span>
+                            </span>
                     </label>
                 </div>
             </div>
@@ -120,8 +124,6 @@ $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinima
                 <?= $block->getRowTotalHtml($_item) ?>
             <?php endif; ?>
         </td>
-    </tr>
-    <tr class="item-actions">
         <td colspan="4">
             <div class="actions-toolbar">
                 <?= /* @noEscape */ $block->getActions($_item) ?>
