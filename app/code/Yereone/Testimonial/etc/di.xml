@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Yereone\Testimonial\Api\TestimonialRepositoryInterface" type="Yereone\Testimonial\Model\TestimonialRepository"/>
+    <virtualType name="Yereone\Testimonial\Model\ResourceModel\Testimonial\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">testimonial</argument>
+            <argument name="resourceModel" xsi:type="string">Yereone\Testimonial\Model\ResourceModel\Testimonial</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="testimonial_testimonial_listing_data_source" xsi:type="string">Yereone\Testimonial\Model\ResourceModel\Testimonial\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Yereone\Testimonial\ImageUploader" type="Yereone\Testimonial\Model\ImageUploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="string">yereone/tmp/image</argument>
+            <argument name="basePath" xsi:type="string">yereone/image</argument>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="jpg" xsi:type="string">jpg</item>
+                <item name="jpeg" xsi:type="string">jpeg</item>
+                <item name="gif" xsi:type="string">gif</item>
+                <item name="png" xsi:type="string">png</item>
+            </argument>
+            <argument name="allowedMimeTypes" xsi:type="array">
+                <item name="jpg" xsi:type="string">image/jpg</item>
+                <item name="jpeg" xsi:type="string">image/jpeg</item>
+                <item name="gif" xsi:type="string">image/gif</item>
+                <item name="png" xsi:type="string">image/png</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Yereone\Testimonial\Controller\Adminhtml\Testimonial\Upload">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">Yereone\Testimonial\ImageUploader</argument>
+        </arguments>
+    </type>
+    <type name="Yereone\Testimonial\Controller\Adminhtml\Testimonial\Save">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">Yereone\Testimonial\ImageUploader</argument>
+        </arguments>
+    </type>
+</config>

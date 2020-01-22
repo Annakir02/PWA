@@ -1,0 +1,78 @@
+
+//
+//  Common
+//  _____________________________________________
+
+
+
+
+
+& when (@media-common = true) {
+	.testimonials {
+		margin-top: 104px;
+		.testimonials-title {
+			.font-style (roboto-condenced, bold, 20px, 23px, 0.08em);
+			text-align: center;
+			font-style: normal;
+		}
+		.testimonial {
+			.owl-item {
+				margin-right: 20px;
+			}
+			.testimonial-info {
+				.image {
+					img {
+						width: 88px;
+						height: 88px;
+						margin-top: 63px;
+						margin-left: 155px;
+						border-radius: 50px;
+					}
+				}
+				.rating {
+					.displaFlex();
+					margin-top: 60px;
+					.justify-content(center);
+					img {
+						width: 13px;
+						height: 13px;
+						margin-right: 5px;
+					}
+				}
+				.text {
+					.font-style (roboto-condenced, normal, 16px, 160%, 0.04em);
+					margin-top: 15px;
+					font-style: italic;
+					text-align: center;
+					color: @color-grey;
+				}
+				.info {
+					.displaFlex();
+					.justify-content(center);
+					margin-top: 55px;
+					span {
+						.font-style (roboto-condenced, normal, 18px, 21px, 0.02em);
+						font-style: normal;
+						text-align: center;
+						margin-right: 6px;
+						color: black;
+						&.flag {
+							margin-right: -5px;
+						}
+						img {
+							width: 17px;
+						}
+
+					}
+				}
+				.speciality {
+					text-align: center;
+					margin-top: 8px;
+					.font-style (roboto-condenced, 300, 16px, 19px, 0.02em);
+					font-style: normal;
+					color: @color-grey;
+				}
+			}
+		}
+	}
+}
