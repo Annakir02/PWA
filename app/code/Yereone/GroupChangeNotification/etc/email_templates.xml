@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="change_customer_group" label="This is email for customer" file="change_customer_group.html" type="html" module="Yereone_GroupChangeNotification" area="frontend"/>
+</config>
