@@ -73,7 +73,7 @@
                             <param xsi:type="url" name="url" path="testimonial/testimonial/upload"/>
                         </uploaderConfig>
                         <openDialogTitle>Media Gallery</openDialogTitle>
-                        <initialMediaGalleryOpenSubpath>yereone/image</initialMediaGalleryOpenSubpath>
+                        <initialMediaGalleryOpenSubpath>yereone/image/testimonial</initialMediaGalleryOpenSubpath>
                         <allowedExtensions>jpg jpeg gif png</allowedExtensions>
                         <maxFileSize>4194304</maxFileSize>
                     </settings>

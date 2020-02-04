@@ -17,7 +17,7 @@
     <virtualType name="Yereone\Banner\ImageUploader" type="Yereone\Banner\Model\ImageUploader">
         <arguments>
             <argument name="baseTmpPath" xsi:type="string">yereone/tmp/image</argument>
-            <argument name="basePath" xsi:type="string">yereone/image</argument>
+            <argument name="basePath" xsi:type="string">yereone/image/banner</argument>
             <argument name="allowedExtensions" xsi:type="array">
                 <item name="jpg" xsi:type="string">jpg</item>
                 <item name="jpeg" xsi:type="string">jpeg</item>

@@ -4,11 +4,11 @@
         <?php foreach ($block->getTestimonials() as $testimonial): ?>
             <div class="testimonial-info">
                 <div class="image">
-                    <img src='<?php echo $block->getBaseMediaUrl() . 'yereone/image/' . $testimonial->getImage(); ?>'>
+                    <img src='<?php echo $block->getBaseMediaUrl() . 'yereone/image/testimonial/' . $testimonial->getImage(); ?>'>
                 </div>
                 <div class="rating">
                     <?php for ( $i = 0; $i < $testimonial->getRating(); $i++): ?>
-                        <img src='<?php echo $block->getBaseMediaUrl() . "testimonial/Star.svg" ?>'>
+                        <img src='<?php echo $block->getBaseMediaUrl() . "yereone/testimonial/Star.svg" ?>'>
                     <?php endfor; ?>
                 </div>
                 <div class="text"><?= $testimonial->getText(); ?></div>
